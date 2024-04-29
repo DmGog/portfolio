@@ -11,19 +11,6 @@ const worksItems = [
     "All", "landing page", "React", "spa"
 ]
 
-const descriptionWork = [
-    [{
-        img: socialImg,
-        title: "Social Network",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    }],
-    [{
-        img: timerImg,
-        title: "Timer",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    }]
-]
-
 export const Works = () => {
     return (
         <StyledWorks>
