@@ -31,7 +31,7 @@ export const Footer = () => {
                         </SocialLink>
                     </SocialItem>
                 </SocialList>
-                <Copyright>© 2024 Dmitriy Goglev, All Rights Reserved.</Copyright>
+                <Copyright>© 2024 All Rights Reserved.</Copyright>
             </FlexWrapper>
         </StyledFooter>
     );
