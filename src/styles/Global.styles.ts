@@ -29,6 +29,8 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
+        color: ${theme.colors.font};
+        cursor: pointer;
     }
 
     ul {
@@ -38,6 +40,12 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+        color: ${theme.colors.font};
+        cursor: pointer;
+    }
+
+    section {
+        padding: 100px 0;
     }
 
     //для нечетных секций
@@ -52,5 +60,19 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.secondaryBg};
     }
 
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    h3 {
+
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+        font-family: "Josefin Sans", sans-serif;
+    }
 `
+
 
