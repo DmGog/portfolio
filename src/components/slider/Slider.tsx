@@ -20,7 +20,7 @@ export const Slider = () => {
             <Pagination>
 
                 <span></span>
-                <span className={"active"}></span>
+                <span className="active"></span>
                 <span></span>
 
             </Pagination>
