@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
+import {font} from "../../styles/Common";
 
 
 export const Footer = () => {
@@ -12,17 +13,17 @@ export const Footer = () => {
                 <Name>Dmitriy</Name>
                 <SocialList>
                     <SocialItem>
-                        <SocialLink>
+                        <SocialLink href={"https://www.instagram.com/dmgoglev?igsh=dWlreXNxZnliaGJr"}>
                             <Icon height={"21px"} width={"21px"} viewBox={"0 0 21 21"} iconId={"instagram"}/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
-                        <SocialLink>
+                        <SocialLink href={"https://t.me/DmGog_37"}>
                             <Icon height={"21px"} width={"21px"} viewBox={"0 0 21 21"} iconId={"telegram"}/>
                         </SocialLink>
                     </SocialItem>
                     <SocialItem>
-                        <SocialLink>
+                        <SocialLink href={"https://vk.com/goglev37"}>
                             <Icon height={"21px"} width={"21px"} viewBox={"0 0 21 21"} iconId={"vk"}/>
                         </SocialLink>
                     </SocialItem>
@@ -44,10 +45,9 @@ const StyledFooter = styled.footer`
 `
 
 const Name = styled.span`
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 700;
-    font-size: 22px;
+    ${font({family: "\"Josefin Sans\", sans-serif", weight: 700, Fmax: 22, Fmin: 16})}
     letter-spacing: 0.14em;
+
 `
 const SocialList = styled.ul`
     display: flex;
@@ -62,7 +62,7 @@ const SocialLink = styled.a`
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    
+
 
     display: flex;
     justify-content: center;
