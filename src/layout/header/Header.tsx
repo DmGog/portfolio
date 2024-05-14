@@ -7,7 +7,7 @@ import {S} from "./Header_Styles"
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 
 const items = [
-    "Home", "Skills", "Works", "Testimony", "Contact"
+    "Home", "Skills", "Works", "Contact"
 ]
 
 export const Header: React.FC = () => {
