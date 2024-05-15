@@ -7,7 +7,7 @@ export type TabsStatusType = "all" | "landing" | "react" | "spa"
 type TabMenuPropsType = {
     tabsItems: Array<{ status: TabsStatusType, title: string }>
     changeFilterStatus: (value: TabsStatusType) => void
-    currentFilterStatus: string
+    currentFilterStatus: TabsStatusType
 }
 
 

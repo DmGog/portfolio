@@ -43,7 +43,7 @@ const workData = [
 ]
 export const Works: React.FC = () => {
 
-    const [currentFilterStatus, setCurrentFilterStatus] = useState("all")
+    const [currentFilterStatus, setCurrentFilterStatus] = useState<TabsStatusType>("all")
     let filterWorks = workData
 
     if (currentFilterStatus === "landing") {

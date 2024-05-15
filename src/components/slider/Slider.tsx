@@ -1,28 +1,41 @@
+
 import React from "react";
-import {FlexWrapper} from "../FlexWrapper";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import {S} from "./Slider_Styles";
+import './../../styles/slider.css'
 
-export const Slider: React.FC = () => {
+
+type SlidePropsType = {
+    text: string
+    userName: string
+}
+
+
+const Slide = (props: SlidePropsType) => {
     return (
-        <S.Slider>
-            <FlexWrapper>
-                <S.Slide>
-                    <S.Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur aut beatae cum
-                        deleniti
-                        dicta eos esse exercitationem expedita inventore, itaque, iure nisi perspiciatis quis quos
-                        tempore
-                        unde vel voluptatibus.</S.Text>
-                    <S.Name>@ivan ivanow</S.Name>
-                </S.Slide>
-            </FlexWrapper>
+        <S.Slide>
+            <S.Text>{props.text}</S.Text>
+            <S.Name>@{props.userName}</S.Name>
+        </S.Slide>)
+}
 
-            <S.Pagination>
 
-                <span></span>
-                <span className="active"></span>
-                <span></span>
+const items = [
+    <Slide text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+           userName={"Ivan Ivanov"}/>,
+    <Slide text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+           userName={"Petr Petrov"}/>,
+    <Slide text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+           userName={"Semen Semenov"}/>,
 
-            </S.Pagination>
-        </S.Slider>
-    );
-};
+];
+
+export const Slider = () => (
+    <S.Slider>
+        <AliceCarousel
+            mouseTracking
+            items={items}
+        />
+    </S.Slider>
+);
