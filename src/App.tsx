@@ -8,6 +8,7 @@ import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 import {MainM} from "./layout/sections/main/MainM";
+import {Particle} from "./components/particle/Particle";
 
 
 
@@ -17,6 +18,7 @@ import {MainM} from "./layout/sections/main/MainM";
 function App() {
     return (
         <div className="App">
+            <Particle/>
             <Header/>
             {/*<MainM/>*/}
             <Main/>
