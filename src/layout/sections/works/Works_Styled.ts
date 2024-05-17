@@ -12,12 +12,9 @@ const Works = styled.section`
 `
 
 
-
 const Work = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    width: 330px;
-    flex-grow: 1;
-
+    
     ${Link} {
         padding: 10px 0;
 
@@ -29,9 +26,9 @@ const Work = styled.div`
     }
 ;
 
-    @media ${theme.media.desktop} {
-        max-width: 540px;
-    }
+    // @media ${theme.media.desktop} {
+    //     max-width: 540px;
+    // }
 `
 
 const ImageWrapper = styled.div`
@@ -43,6 +40,7 @@ const ImageWrapper = styled.div`
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        transition: ${theme.animations.transition};
 
         &::before {
             height: 100%;
@@ -59,9 +57,10 @@ const ImageWrapper = styled.div`
         right: 0;
         top: 0;
         bottom: 0;
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(2px);
         background: rgba(0, 0, 0, 0.3);
         opacity: 0;
+        transition: ${theme.animations.transition};
     }
 ;
 

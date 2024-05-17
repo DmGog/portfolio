@@ -1,6 +1,7 @@
 import React from "react";
 import {Icon} from "../../../../components/icon/Icon";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {Fade} from "react-awesome-reveal";
 
 import {S} from "../Skills_Styles";
 
@@ -10,15 +11,17 @@ type SkillPropsType = {
     description: string
 }
 
-export const Skill:React.FC<SkillPropsType> = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
     return (
         <S.Skill>
             <FlexWrapper direction={"column"} align={"center"}>
-                <S.IconWrapper>
-                    <Icon iconId={props.iconId}/>
-                </S.IconWrapper>
-                <S.SkillTitle>{props.title}</S.SkillTitle>
-                <S.SkillText>{props.description}</S.SkillText>
+                <Fade cascade={true} damping={0.2}>
+                    <S.IconWrapper>
+                        <Icon iconId={props.iconId}/>
+                    </S.IconWrapper>
+                    <S.SkillTitle>{props.title}</S.SkillTitle>
+                    <S.SkillText>{props.description}</S.SkillText>
+                </Fade>
             </FlexWrapper>
         </S.Skill>
     );

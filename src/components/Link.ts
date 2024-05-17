@@ -1,7 +1,7 @@
 import {theme} from "../styles/Theme";
 import styled, {css} from "styled-components";
 
-export const Link = styled.a < {active?: boolean}>`
+export const Link = styled.a <{ active?: boolean }>`
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.07em;
@@ -21,8 +21,10 @@ export const Link = styled.a < {active?: boolean}>`
         left: 0;
         right: 0;
         z-index: -1;
-        
-        ${props=> props.active && css<{active?: boolean}>`
+        height: 0;
+        transition: ${theme.animations.transition};
+
+        ${props => props.active && css<{ active?: boolean }>`
             height: 10px;
         `}
 
