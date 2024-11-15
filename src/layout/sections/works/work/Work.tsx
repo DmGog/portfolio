@@ -7,6 +7,8 @@ type WorkPropsType = {
     title: string
     text: string
     src: string
+    urlDemo: string
+    urlCode: string
 }
 
 
@@ -15,13 +17,14 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
         <S.Work>
             <S.ImageWrapper>
                 <S.Image src={props.src} alt=""/>
-                <Button>view project</Button>
+                <Button as={"a"} href={props.urlDemo} target={"_blank"}
+                        style={{display: "flex", justifyContent: "center", alignItems: "center"}}>view project</Button>
             </S.ImageWrapper>
             <S.Description>
                 <S.TitleWork>{props.title}</S.TitleWork>
                 <S.TextWork>{props.text}</S.TextWork>
-                <Link active href={"#"}>demo</Link>
-                <Link href={"#"}>code</Link>
+                <Link active href={props.urlDemo} target={"_blank"}>demo</Link>
+                <Link href={props.urlCode} target={"_blank"}>code</Link>
             </S.Description>
         </S.Work>
     );

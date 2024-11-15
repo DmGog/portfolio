@@ -2,8 +2,7 @@ import React, {useState} from "react";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
-import socialImg from "./../../../assets/images/proj-1.png"
-import timerImg from "./../../../assets/images/proj-2.png"
+import catchTheOffer from "./../../../assets/images/catch-the-offer.png"
 import {Container} from "../../../components/Container";
 import {S} from "./Works_Styled";
 import {TabMenu, TabsStatusType} from "./tabMenu/TabMenu";
@@ -15,8 +14,8 @@ const tabsItems: Array<{ status: TabsStatusType, title: string }> = [
         status: "all"
     },
     {
-        title: "landing page",
-        status: "landing"
+        title: "game dev",
+        status: "gameDev"
     },
     {
         title: "React",
@@ -30,18 +29,13 @@ const tabsItems: Array<{ status: TabsStatusType, title: string }> = [
 
 const workData = [
     {
-        title: "Social Network",
-        src: socialImg,
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        type: "spa",
+        title: "Game: 'Catch the Offer'",
+        src: catchTheOffer,
+        text: "Catch the Offer is an engaging arcade game where players must catch appearing offers while avoiding misses. With customizable settings like grid size and win points, each playthrough offers a unique experience. Quick reflexes and strategy are key to victory, making it fun for all ages. Enjoy hours of entertainment with this dynamic and easy-to-play game!",
+        type: "gameDev",
         id: 1,
-    },
-    {
-        title: "Timer",
-        src: timerImg,
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        type: "react",
-        id: 2,
+        urlDemo: "https://dmgog.github.io/Game-Catch-The-Offer/",
+        urlCode: "https://github.com/DmGog/Game-Catch-The-Offer",
     },
 ]
 export const Works: React.FC = () => {
@@ -49,8 +43,8 @@ export const Works: React.FC = () => {
     const [currentFilterStatus, setCurrentFilterStatus] = useState<TabsStatusType>("all")
     let filterWorks = workData
 
-    if (currentFilterStatus === "landing") {
-        filterWorks = workData.filter(work => work.type === "landing")
+    if (currentFilterStatus === "gameDev") {
+        filterWorks = workData.filter(work => work.type === "gameDev")
     }
 
     if (currentFilterStatus === "react") {
@@ -75,7 +69,7 @@ export const Works: React.FC = () => {
                          currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
                     <AnimatePresence>
-                        {filterWorks.map((w, index) => {
+                        {filterWorks.map((w) => {
                             return (
                                 <motion.div style={{width: "330px", flexGrow: 1, maxWidth: "540px"}}
                                             layout={true}
@@ -88,7 +82,10 @@ export const Works: React.FC = () => {
                                     <Work src={w.src}
                                           title={w.title}
                                           text={w.text}
-                                          key={w.id}/>
+                                          key={w.id}
+                                          urlDemo={w.urlDemo}
+                                          urlCode={w.urlCode}
+                                    />
                                 </motion.div>
                             )
                         })}
