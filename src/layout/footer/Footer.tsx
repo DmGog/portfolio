@@ -17,10 +17,6 @@ const socialItemsData = [
         iconId: "vk",
         src: "https://vk.com/goglev37"
     },
-    {
-        iconId: "linkedin",
-        src: "#"
-    },
 ]
 
 export const Footer: React.FC = () => {

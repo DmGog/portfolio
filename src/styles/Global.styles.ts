@@ -53,13 +53,9 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    //для нечетных секций
-
     section:nth-of-type(odd) {
         background-color: ${theme.colors.primaryBg};
     }
-
-    //для четных секций 
 
     section:nth-of-type(even) {
         background-color: ${theme.colors.secondaryBg};

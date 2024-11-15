@@ -17,18 +17,11 @@ const Work = styled.div`
     
     ${Link} {
         padding: 10px 0;
-
-        //для всех Link, которые идут после Link
-
         & + ${Link} {
             margin-left: 20px;
         }
     }
 ;
-
-    // @media ${theme.media.desktop} {
-    //     max-width: 540px;
-    // }
 `
 
 const ImageWrapper = styled.div`
