@@ -8,7 +8,6 @@ import {S} from "../Skills_Styles";
 type SkillPropsType = {
     iconId: string
     title: string
-    description: string
 }
 
 export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
@@ -20,7 +19,6 @@ export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
                         <Icon iconId={props.iconId}/>
                     </S.IconWrapper>
                     <S.SkillTitle>{props.title}</S.SkillTitle>
-                    <S.SkillText>{props.description}</S.SkillText>
                 </Fade>
             </FlexWrapper>
         </S.Skill>

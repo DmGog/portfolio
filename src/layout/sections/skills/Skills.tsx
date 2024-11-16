@@ -9,37 +9,31 @@ const skillData = [
     {
         iconId: "code",
         title: "html5",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
         iconId: "css",
         title: "css3",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
         iconId: "react",
         title: "react",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
         iconId: "ts",
         title: "typescript",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
         iconId: "sc",
         title: "styled components",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
     {
         iconId: "wb",
         title: "web design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
     },
 ]
 
 
-export const Skills:React.FC = () => {
+export const Skills: React.FC = () => {
 
 
     return (
@@ -50,8 +44,7 @@ export const Skills:React.FC = () => {
 
                     {skillData.map((s, index) => {
                         return <Skill iconId={s.iconId} key={index}
-                                      title={s.title}
-                                      description={s.description}/>
+                                      title={s.title}/>
                     })}
                 </FlexWrapper>
             </Container>
