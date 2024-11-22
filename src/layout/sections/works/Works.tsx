@@ -3,6 +3,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import catchTheOffer from "./../../../assets/images/catch-the-offer.png"
+import taskFlow from "./../../../assets/images/taskFlow.png"
 import {Container} from "../../../components/Container";
 import {S} from "./Works_Styled";
 import {TabMenu, TabsStatusType} from "./tabMenu/TabMenu";
@@ -36,6 +37,15 @@ const workData = [
         id: 1,
         urlDemo: "https://dmgog.github.io/Game-Catch-The-Offer/",
         urlCode: "https://github.com/DmGog/Game-Catch-The-Offer",
+    },
+    {
+        title: "Task Flow",
+        src: taskFlow,
+        text: "Task Flow is an intuitive task management application built with React, designed to optimize your productivity. Users can easily create, organize tasks, ensuring that nothing gets overlooked. With features like the ability to add notes and track task status, Task Flow adapts to your workflow. Boost your efficiency and enjoy a more organized life with Task Flow!",
+        type: "react",
+        id: 2,
+        urlDemo: "https://dmgog.github.io/TaskFlow/#/login",
+        urlCode: "https://github.com/DmGog/TaskFlow",
     },
 ]
 export const Works: React.FC = () => {
