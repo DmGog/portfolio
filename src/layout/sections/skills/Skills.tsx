@@ -27,8 +27,8 @@ const skillData = [
         title: "styled components",
     },
     {
-        iconId: "wb",
-        title: "web design",
+        iconId: "redux",
+        title: "Redux",
     },
 ]
 
