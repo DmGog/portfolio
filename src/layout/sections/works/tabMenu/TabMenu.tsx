@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {Link} from "../../../../components/Link";
 
-export type TabsStatusType = "all" | "gameDev" | "react" | "spa"
+export type TabsStatusType = "all" | "gameDev" | "react"
 
 type TabMenuPropsType = {
     tabsItems: Array<{ status: TabsStatusType, title: string }>

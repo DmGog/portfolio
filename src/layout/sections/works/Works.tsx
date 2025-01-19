@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import catchTheOffer from "./../../../assets/images/catch-the-offer.png"
 import taskFlow from "./../../../assets/images/taskFlow.png"
+import zabota from "./../../../assets/images/zabota.png"
 import {Container} from "../../../components/Container";
 import {S} from "./Works_Styled";
 import {TabMenu, TabsStatusType} from "./tabMenu/TabMenu";
@@ -21,16 +22,12 @@ const tabsItems: Array<{ status: TabsStatusType, title: string }> = [
     {
         title: "React",
         status: "react"
-    },
-    {
-        title: "Spa",
-        status: "spa"
-    },
+    }
 ]
 
 const workData = [
     {
-        title: "Game: 'Catch the Offer'",
+        title: "Game: 'Catch the Offer', JavaScript (Vanilla)",
         src: catchTheOffer,
         text: "Catch the Offer is an engaging arcade game where players must catch appearing offers while avoiding misses. With customizable settings like grid size and win points, each playthrough offers a unique experience. Quick reflexes and strategy are key to victory, making it fun for all ages. Enjoy hours of entertainment with this dynamic and easy-to-play game!",
         type: "gameDev",
@@ -47,6 +44,15 @@ const workData = [
         urlDemo: "https://dmgog.github.io/TaskFlow/#/login",
         urlCode: "https://github.com/DmGog/TaskFlow",
     },
+    {
+        title: "The marketplace \"Care Nearby\"",
+        src: zabota,
+        text: "The project is a comprehensive marketplace portal designed for submitting applications for charitable assistance. Charitable organizations can create and manage requests for help, allowing users to easily view these requests and participate in various initiatives. This platform not only fosters connections between organizations and individuals but also promotes community involvement and support.",
+        type: "react",
+        id: 3,
+        urlDemo: "https://project-caring-nearby.vercel.app",
+        urlCode: "https://github.com/DmGog/project-caring-nearby",
+    },
 ]
 export const Works: React.FC = () => {
 
@@ -60,11 +66,6 @@ export const Works: React.FC = () => {
     if (currentFilterStatus === "react") {
         filterWorks = workData.filter(work => work.type === "react")
     }
-
-    if (currentFilterStatus === "spa") {
-        filterWorks = workData.filter(work => work.type === "spa")
-    }
-
 
     function changeFilterStatus(value: TabsStatusType) {
         setCurrentFilterStatus(value)

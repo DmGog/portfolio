@@ -7,7 +7,7 @@ import {S} from "./Header_Styles"
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 
 
-
+//
 export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
