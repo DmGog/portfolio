@@ -41,8 +41,8 @@ const workData = [
         text: "Task Flow is an intuitive task management application built with React, designed to optimize your productivity. Users can easily create, organize tasks, ensuring that nothing gets overlooked. With features like the ability to add notes and track task status, Task Flow adapts to your workflow. Boost your efficiency and enjoy a more organized life with Task Flow!",
         type: "react",
         id: 2,
-        urlDemo: "https://github.com/DmGog/Mindbox-todo-app",
-        urlCode: "https://dmgog.github.io/Mindbox-todo-app/",
+        urlDemo: "https://dmgog.github.io/Mindbox-todo-app/",
+        urlCode: "https://github.com/DmGog/Mindbox-todo-app",
     },
     {
         title: "The marketplace \"Care Nearby\"",
